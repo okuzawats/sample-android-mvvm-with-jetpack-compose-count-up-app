@@ -7,8 +7,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.livedata.observeAsState
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun CountUp(viewModel: CountViewModel) {
-    val count by viewModel.count.observeAsState()
+    val count by viewModel.count.collectAsState()
 
     Column {
         Text(
