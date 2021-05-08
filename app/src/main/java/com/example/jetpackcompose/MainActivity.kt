@@ -32,7 +32,7 @@ fun CountUp(viewModel: CountViewModel) {
         )
         Button(
             onClick = {
-                viewModel.countUp()
+                viewModel.onCountUpTapped()
             }
         ) {
             Text(

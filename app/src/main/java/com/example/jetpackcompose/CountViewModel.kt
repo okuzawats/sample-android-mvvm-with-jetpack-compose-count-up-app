@@ -9,7 +9,7 @@ class CountViewModel : ViewModel() {
     private val _count = MutableStateFlow<Int>(0)
     val count: Flow<String> get() = _count.map { it.toString() }
 
-    fun countUp() {
+    fun onCountUpTapped() {
         val currentValue = requireNotNull(_count.value)
         _count.value = currentValue + 1
     }
