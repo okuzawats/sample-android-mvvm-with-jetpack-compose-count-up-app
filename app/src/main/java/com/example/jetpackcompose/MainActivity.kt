@@ -24,11 +24,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun CountUp(viewModel: CountViewModel) {
-    val count: Int by viewModel.count.collectAsState()
+    val count: String by viewModel.count.collectAsState("")
 
     Column {
         Text(
-            text = count.toString()
+            text = count
         )
         Button(
             onClick = {

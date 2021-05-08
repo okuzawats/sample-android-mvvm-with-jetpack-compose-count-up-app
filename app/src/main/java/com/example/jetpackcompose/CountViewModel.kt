@@ -1,12 +1,13 @@
 package com.example.jetpackcompose
 
 import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.map
 
 class CountViewModel : ViewModel() {
     private val _count = MutableStateFlow<Int>(0)
-    val count: StateFlow<Int> get() = _count
+    val count: Flow<String> get() = _count.map { it.toString() }
 
     fun countUp() {
         val currentValue = requireNotNull(_count.value)
