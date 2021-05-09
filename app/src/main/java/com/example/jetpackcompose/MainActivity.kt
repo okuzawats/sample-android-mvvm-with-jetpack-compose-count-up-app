@@ -8,11 +8,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 
 class MainActivity : ComponentActivity() {
-    private val viewModel: CountViewModel by viewModels<CountViewModel>()
+    private val viewModel: CountViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,11 +23,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun CountUp(viewModel: CountViewModel) {
-    val count: String by viewModel.count.collectAsState("")
+    val count: Int by viewModel.count
 
     Column {
         Text(
-            text = count
+            text = "$count"
         )
         Button(
             onClick = {
