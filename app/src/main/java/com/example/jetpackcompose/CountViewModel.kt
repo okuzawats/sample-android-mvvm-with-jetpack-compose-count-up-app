@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModel
  *
  * @property count カウントの回数を保持するMutableState<Int>
  */
-class CountViewModel :ViewModel() {
+class CountViewModel : ViewModel() {
 
     /**
      * カウントの回数を保持する
