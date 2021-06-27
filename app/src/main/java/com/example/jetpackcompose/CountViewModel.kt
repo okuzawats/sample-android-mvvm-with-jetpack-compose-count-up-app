@@ -5,9 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 
 /**
- * カウント画面に対するViewModel
- *
- * @property count カウントの回数を保持するMutableState<Int>
+ * カウントの状態を持つViewModel
  */
 class CountViewModel : ViewModel() {
 
